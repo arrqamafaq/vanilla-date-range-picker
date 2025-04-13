@@ -1,14 +1,14 @@
+import Button from "./ui/Button";
+
 export default function CalenderActions() {
   const actions = document.createElement("div");
   actions.id = "calender-actions";
 
-  const cancelBtn = document.createElement("button");
+  const cancelBtn = Button({ text: "Cancel", className:"bg-zinc-800 text-white" });
   cancelBtn.id = "cancel-btn";
-  cancelBtn.textContent = "Cancel";
 
-  const applyBtn = document.createElement("button");
+  const applyBtn = Button({ text: "Apply", className: "bg-blue-500 text-white" });
   applyBtn.id = "apply-btn";
-  applyBtn.textContent = "Apply";
 
   actions.appendChild(cancelBtn);
   actions.appendChild(applyBtn);
