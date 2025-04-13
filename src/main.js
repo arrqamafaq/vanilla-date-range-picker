@@ -12,5 +12,4 @@ DatepickerContainer.appendChild(Datepicker());
 
 appRoot.appendChild(DatepickerContainer);
 
-const mainApp = app();
-DatepickerContainer.appendChild(mainApp);
+DatepickerContainer.appendChild(app());

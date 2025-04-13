@@ -1,16 +1,19 @@
-
 /*main component - bootstraps everything*/
 export default function app() {
   const app = document.createElement("div");
   app.id = "picker-app";
 
+  app.appendChild(datePickerToggle());
+  app.appendChild(calender());
+  app.appendChild(dateSelectionDisplay());
+  app.appendChild(calenderActions());
 
   return app;
 }
 
 /*components */
 
-function DatePickerToggle() {
+function datePickerToggle() {
   const button = document.createElement("button");
   button.textContent = "Select Date";
   button.className = "toggle-button";
@@ -37,7 +40,7 @@ function calenderBody() {
   return body;
 }
 
-function DateSelectionDisplay() {
+function dateSelectionDisplay() {
   const wrapper = document.createElement("div");
   wrapper.className = "date-selection-display";
 
