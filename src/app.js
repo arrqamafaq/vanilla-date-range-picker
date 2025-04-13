@@ -4,7 +4,7 @@ export default function app() {
   const app = document.createElement("div");
   app.id = "picker-app";
 
-  
+
   return app;
 }
 
@@ -51,7 +51,6 @@ function DateSelectionDisplay() {
 
   wrapper.appendChild(start);
   wrapper.appendChild(end);
-
   return wrapper;
 }
 
