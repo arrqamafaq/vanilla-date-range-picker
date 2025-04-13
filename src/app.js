@@ -1,17 +1,20 @@
 import Calender from "./components/Calender";
-import CalenderActions from "./components/CalenderActions";
 import DatepickerToggle from "./components/DatepickerToggle";
-import DateSelectionDisplay from "./components/DateSelectionDisplay";
+
+import { setCalenderRef } from "./controllers/calenderController";
 
 /*main component - bootstraps everything*/
 export default function app() {
   const app = document.createElement("div");
   app.id = "picker-app";
 
-  app.appendChild(DatepickerToggle());
-  app.appendChild(Calender());
-  app.appendChild(DateSelectionDisplay());
-  app.appendChild(CalenderActions());
+  const calender = Calender();
+  const datepickerToggleBtn = DatepickerToggle();
+  // Register calendar reference
+  setCalenderRef(calender);
+
+  app.appendChild(datepickerToggleBtn);
+  app.appendChild(calender);
 
   return app;
 }
