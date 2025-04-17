@@ -31,7 +31,7 @@ export default function CalenderGrid(selectedDate) {
     day.className = `place-items-center aspect-square border border-zinc-200 hover:bg-blue-300 cursor-pointer ${
       isSameMonth(date, selectedDate) ? "text-black" : "text-zinc-400"
     } ${
-      isSameDay(date, selectedDate) && isSameMonth(date, selectedDate)
+      isSameDay(date, selectedDate) && isSameMonth(date, new Date())
         ? "bg-blue-500 text-white"
         : ""
     }`;

@@ -1,9 +1,10 @@
-import { addMonths, format } from "date-fns";
+import { addMonths, subMonths, format } from "date-fns";
 import Button from "./ui/Button";
 import { getSelectedMonth, setSelectedMonth } from "../state/calenderState";
 
-export default function CalenderHeader(selectedDate) {
+export default function CalenderHeader(selectedDate, rerender) {
   const header = document.createElement("div");
+  header.id = "calender-header";
   header.className = "flex justify-between items-center";
   // header.textContent = "Header - Month & year + buttons";
 
@@ -31,10 +32,12 @@ export default function CalenderHeader(selectedDate) {
 
   nextBtn.addEventListener("click", () => {
     setSelectedMonth(addMonths(getSelectedMonth(), 1));
+    rerender();
   });
 
   prevBtn.addEventListener("click", () => {
     setSelectedMonth(subMonths(getSelectedMonth(), 1));
+    rerender();
   });
 
   header.appendChild(prevBtn);
