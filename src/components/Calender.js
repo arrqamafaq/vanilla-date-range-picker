@@ -10,7 +10,7 @@ export default function Calender() {
   calender.className = "hidden transition-all duration-600 ease bg-yellow-300";
 
   const header = CalenderHeader();
-  const body = CalenderBody();
+  const body = CalenderBody(new Date());
   const selectionDisplay = DateSelectionDisplay();
   const actions = CalenderActions();
 
