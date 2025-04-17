@@ -30,7 +30,7 @@ export default function Calender() {
 
     // recreate them
     const header = CalenderHeader(getSelectedMonth(), renderCalenderBody);
-    const body = CalenderBody(getSelectedMonth());
+    const body = CalenderBody(getSelectedMonth(),renderCalenderBody);
 
     calender.prepend(header);
     calender.insertBefore(body, bottomDiv);

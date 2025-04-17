@@ -1,7 +1,16 @@
-import { format, getUnixTime, isSameMonth, isSameDay } from "date-fns";
+import {
+  format,
+  getUnixTime,
+  isSameMonth,
+  isSameDay,
+  eachDayOfInterval,
+  fromUnixTime,
+} from "date-fns";
 import generateCalenderGrid from "../../utils/generateCalenderDates";
+import { selectDate } from "../../controllers/calenderController";
+import { getEndDate, getStartDate } from "../../state/calenderState";
 
-export default function CalenderGrid(selectedDate) {
+export default function CalenderGrid(selectedDate, rerender) {
   const dates = generateCalenderGrid(selectedDate);
 
   const container = document.createElement("div");
@@ -36,6 +45,32 @@ export default function CalenderGrid(selectedDate) {
         : ""
     }`;
     day.id = getUnixTime(date);
+
+    day.addEventListener("click", () => {
+      selectDate(day);
+      rerender();
+    });
+    let selectedDates=[];
+    if (getStartDate() && getEndDate()) {
+       selectedDates = eachDayOfInterval({
+        start: fromUnixTime(getStartDate()),
+        end: fromUnixTime(getEndDate()),
+      });
+      
+    }
+    else if(getStartDate()){
+      selectedDates = [fromUnixTime(getStartDate())];
+    }
+    console.log(selectedDates);
+
+    if (
+      selectedDates.some((selectedDate) =>
+        isSameDay(selectedDate, fromUnixTime(day.id))
+      )
+    ) {
+      console.log("inside");
+      day.classList.add("bg-purple-400", "text-white");
+    }
 
     grid.appendChild(day);
   });
