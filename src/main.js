@@ -1,6 +1,7 @@
 import "./style.css";
 import { Datepicker } from "./datepicker";
 import app from "./app";
+import generateCalenderGrid from "./utils/generateCalenderDates";
 
 // Mount to #app
 const appRoot = document.getElementById("root");
@@ -13,3 +14,5 @@ DatepickerContainer.appendChild(Datepicker());
 appRoot.appendChild(DatepickerContainer);
 
 DatepickerContainer.appendChild(app());
+
+
