@@ -18,7 +18,7 @@ export default function CalenderGrid(selectedDate, rerender) {
   // Weekday headers (starting from Monday)
   const weekdays = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"];
   const headerRow = document.createElement("div");
-  headerRow.className = "grid grid-cols-7 gap-1 mb-2";
+  headerRow.className = "grid grid-cols-7 gap-1";
 
   weekdays.forEach((day) => {
     const label = document.createElement("div");
@@ -32,7 +32,7 @@ export default function CalenderGrid(selectedDate, rerender) {
 
   //dates grid
   const grid = document.createElement("div");
-  grid.className = "grid grid-cols-7 gap-1";
+  grid.className = "grid grid-cols-7 gap-1 my-2";
 
   dates.forEach((date) => {
     const day = document.createElement("button");
@@ -61,14 +61,14 @@ export default function CalenderGrid(selectedDate, rerender) {
     else if(getStartDate()){
       selectedDates = [fromUnixTime(getStartDate())];
     }
-    console.log(selectedDates);
+    // console.log(selectedDates);
 
     if (
       selectedDates.some((selectedDate) =>
         isSameDay(selectedDate, fromUnixTime(day.id))
       )
     ) {
-      console.log("inside");
+      // console.log("inside");
       day.classList.add("bg-purple-400", "text-white");
     }
 

@@ -7,10 +7,11 @@ import { getSelectedMonth } from "../state/calenderState";
 export default function Calender() {
   const calender = document.createElement("div");
   calender.id = "calender";
-  calender.className = "hidden transition-all duration-600 ease bg-yellow-300";
+  calender.className = "hidden transition-all duration-600 ease border px-3 py-3 rounded-2xl";
 
   const bottomDiv = document.createElement("div");
   bottomDiv.id = "bottom-div";
+  bottomDiv.className="flex items-center gap-2"
 
   const selectionDisplay = DateSelectionDisplay();
   const actions = CalenderActions();
@@ -32,6 +33,7 @@ export default function Calender() {
     const header = CalenderHeader(getSelectedMonth(), renderCalenderBody);
     const body = CalenderBody(getSelectedMonth(),renderCalenderBody);
 
+    
     calender.prepend(header);
     calender.insertBefore(body, bottomDiv);
   }
