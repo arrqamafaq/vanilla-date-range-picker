@@ -2,6 +2,7 @@ import CalenderActions from "./CalenderActions";
 import DateSelectionDisplay from "./DateSelectionDisplay";
 import CalenderHeader from "./CalenderHeader";
 import CalenderBody from "./CalenderBody";
+import { getSelectedMonth } from "../state/calenderState";
 
 export default function Calender() {
   const calender = document.createElement("div");
@@ -9,8 +10,8 @@ export default function Calender() {
   calender.textContent = "Calender will be here";
   calender.className = "hidden transition-all duration-600 ease bg-yellow-300";
 
-  const header = CalenderHeader();
-  const body = CalenderBody(new Date());
+  const header = CalenderHeader(getSelectedMonth());
+  const body = CalenderBody(getSelectedMonth());
   const selectionDisplay = DateSelectionDisplay();
   const actions = CalenderActions();
 
