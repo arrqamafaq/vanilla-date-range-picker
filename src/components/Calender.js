@@ -7,7 +7,7 @@ import { getSelectedMonth } from "../state/calenderState";
 export default function Calender() {
   const calender = document.createElement("div");
   calender.id = "calender";
-  calender.className = "hidden transition-all duration-600 ease border px-3 py-3 rounded-2xl";
+  calender.className = "hidden transition-all duration-600 ease border px-3 py-3 rounded-2xl w-full h-full";
 
   const bottomDiv = document.createElement("div");
   bottomDiv.id = "bottom-div";

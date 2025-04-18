@@ -47,11 +47,11 @@ Inspired by the declarative UI and state-driven rendering approach in React, thi
 - **`style.css`**  
   Contains custom styles and Tailwind CSS configurations, ensuring a consistent and responsive design.
 
-- **`app.js`**  
+- **`DatePicker.js or can use app.js`**  
   The entry point that ties everything together, initializes the calendar.
 
   **`main.js`**  
-  Initializes the app by importing necessary functions and setting up global configurations. This is where the calendar is attached to the DOM and where the event listeners are activated for user interactions.
+  Initializes the calender (app) by importing necessary functions and setting up global configurations. This is where the calendar is attached to the DOM and where the event listeners are activated for user interactions.
 
 ---
 

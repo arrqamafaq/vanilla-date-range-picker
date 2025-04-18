@@ -1,18 +1,13 @@
 import "./style.css";
-import { Datepicker } from "./datepicker";
-import app from "./app";
-import generateCalenderGrid from "./utils/generateCalenderDates";
+import DatePicker from "./DatePicker";
 
 // Mount to #app
 const appRoot = document.getElementById("root");
 appRoot.className = "w-full h-screen flex justify-center items-center";
 
-const DatepickerContainer = document.createElement("div");
-DatepickerContainer.className = "w-[70%] h-[65%]";
-DatepickerContainer.appendChild(Datepicker());
+const container = document.createElement("div");
+container.className = "w-[80%] max-w-[620px] h-[70%]";
+//using datePicker as component
+container.appendChild(DatePicker());
 
-appRoot.appendChild(DatepickerContainer);
-
-DatepickerContainer.appendChild(app());
-
-
+appRoot.appendChild(container);
