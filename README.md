@@ -34,10 +34,8 @@ Inspired by the declarative UI and state-driven rendering approach in React, thi
 
 - **`components/`**  
   Contains all the UI components, including the calendar grid, header, actions (Apply/Cancel), and the date display.
-  
 - **`controllers/`**  
   Handles the core logic, such as date selection, state management, and calendar visibility.
-  
 - **`state/`**  
   Manages the application state, including the selected start and end dates, and the currently selected month.
 
@@ -55,28 +53,51 @@ Inspired by the declarative UI and state-driven rendering approach in React, thi
 
 ---
 
+## Live Link
+
+https://arrqamafaq.github.io/vanilla-date-range-picker
+
+---
+
+## Screenshots
+
+![alt text](<Screenshot from 2025-04-18 19-55-48.png>)
+![alt text](<Screenshot from 2025-04-18 19-56-07.png>)
+
+---
 
 ## 🚀 Getting Started
 
 1. Clone the repo:
+
    ```bash
-   git clone https://github.com/your-username/vanilla-js-date-picker.git
+   git clone https://github.com/arrqamafaq/vanilla-date-range-picker
+
+   ```
 
 2. Install dependencies:
-    ```bash
-    cd vanilla-js-date-picker
-    npm install
+
+   ```bash
+   cd vanilla-js-date-picker
+   npm install
+
+   ```
 
 3. Run the development server:
-    ```bash
-    npm run dev
 
-4.  Open the provided local server URL in your browser (typically http://localhost:3000).
+   ```bash
+   npm run dev
+
+   ```
+
+4. Open the provided local server URL in your browser (typically http://localhost:3000).
 
 ## 📦 Dependencies
+
 - Tailwind CSS: A utility-first CSS framework used for styling the components.
 
 - date-fns: A lightweight library for handling date manipulation, formatting, and comparison.
 
 ## 🙌 Contributing
+
 Feel free to open issues or submit pull requests for improvements, bug fixes, or feature requests. Contributions are welcome!
