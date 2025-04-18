@@ -14,7 +14,7 @@ export default function Calender() {
   bottomDiv.className="flex items-center gap-2"
 
   const selectionDisplay = DateSelectionDisplay();
-  const actions = CalenderActions();
+  const actions = CalenderActions(renderCalenderBody);
 
   bottomDiv.appendChild(selectionDisplay);
   bottomDiv.appendChild(actions);
