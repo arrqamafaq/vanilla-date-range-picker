@@ -55,7 +55,7 @@ Inspired by the declarative UI and state-driven rendering approach in React, thi
 
 ## Live Link
 
-https://arrqamafaq.github.io/vanilla-date-range-picker
+[https://vanilla-date-range-picker.vercel.app]
 
 ---
 
